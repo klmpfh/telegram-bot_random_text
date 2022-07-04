@@ -17,7 +17,7 @@ if(!admin_id) throw new Error("pls setup your user id in your nodejs call");
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(bot_token, { polling: true });
-const data = new JSONdb('__dirname/../data.json');
+const data = new JSONdb(__dirname + '/../data.json');
 
 const isThisMsgFromAdmin = require('./isThisMsgFromAdmin')(admin_id);
 
